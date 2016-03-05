@@ -1,0 +1,32 @@
+{
+  "name": "learn-npm",
+  "version": "2.1.1",
+  "description": "learn npm using Pluralsiht",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "node index.js 3000",
+    "test": "mocha test -u bdd -R spec",
+    "lint": "jshint ./ ./test",
+    "pretest": "npm run lint",
+    "watch:test": "npm test -- -w -R min",
+    "version:major": "npm version major",
+    "version:minor": "npm version minor",
+    "version:patch": "npm version patch"
+  },
+  "jshintConfig": {
+    "esnext": true,
+    "noyield": true
+  },
+  "author": "Saif",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^1.1.2"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.1",
+    "mocha": "^2.4.5",
+    "should": "^8.2.2",
+    "supertest": "^1.2.0"
+  }
+}
